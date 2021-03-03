@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         val list = MutableList(100) { pos -> "Elemento $pos"}
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = StringAdapter(list)
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter = StringAdapter(list)
     }
 
 }

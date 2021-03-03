@@ -13,6 +13,7 @@ class StringAdapter(var stringList : List<String>) : RecyclerView.Adapter<String
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StringViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
         val twTextView = view.findViewById<TextView>(R.id.textView)
+        val twTextView2 = view.findViewById<TextView>(R.id.textView)
         return StringViewHolder(view, twTextView)
     }
 
@@ -22,6 +23,7 @@ class StringAdapter(var stringList : List<String>) : RecyclerView.Adapter<String
 
     override fun onBindViewHolder(holder: StringViewHolder, position: Int) {
         holder.textView.text = stringList[position]
+        holder.textView2.text = stringList[position]
     }
 }
 
